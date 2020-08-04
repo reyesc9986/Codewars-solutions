@@ -1,0 +1,32 @@
+def create_phone_number(n):
+    #my initial instinct here is to split the lists in groups.
+    First_Three = n[0:3]
+    Second_Three = n[3:6]
+    Last_Four = n[-4:]
+    #turn the list to a string.   
+    phone_number ='('
+    #iterate throug the list to get the desired elements
+    for element in First_Three:
+        #add them to a string
+        phone_number = str(phone_number) +str(element) 
+    phone_number =str(phone_number) + ') '
+    for element in Second_Three:
+        phone_number = str(phone_number) +str(element)
+    phone_number = str(phone_number) + '-'
+    for element in Last_Four:
+        phone_number = str(phone_number)  +str(element)
+    #print(phone_number)
+    return(phone_number)
+    
+    #Split 0-3, split 3-6, split -4:
+    #I think I need to make new lists each time
+
+
+
+#Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+#Example:
+
+#create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns "(123) 456-7890"
+
+#The returned format must be correct in order to complete this challenge.
+#Don't forget the space after the closing parentheses!
