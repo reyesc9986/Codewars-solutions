@@ -1,0 +1,26 @@
+def find_outlier(integers):
+#Create two lists
+    even_list =[]
+    odd_list =[]
+#Iterate through the input and check if it's odd or even
+    for item in integers:
+    #Even numbers are divisible by two, use modulus to check for a remainder.
+        if item % 2 == 0:
+            even_list.append(item)
+        elif item % 2 !=0:
+            odd_list.append(item)
+     #Check the length of the lists, if there's an outlier there should only be one. Hence return the list that only has one member
+    if len(odd_list) < 2:
+        return odd_list[0]
+    elif len(even_list) < 2:
+        return even_list[0]
+        
+ #You are given an array (which will have a length of at least 3, but could be very large) containing integers. 
+ #The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. 
+ #Write a method that takes the array as an argument and returns this "outlier" N.
+ 
+ #[2, 4, 0, 100, 4, 11, 2602, 36]
+#Should return: 11 (the only odd number)
+
+#[160, 3, 1719, 19, 11, 13, -21]
+#Should return: 160 (the only even number)
