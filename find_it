@@ -1,0 +1,21 @@
+def find_it(seq):
+#Use a dictionary.
+    intdict ={}
+    oddlist =[]
+#Iterate through the numbers, add them to the dictionary.
+#If the number isn't in the dictionary. add it.
+#if it is, increase its key value by 1.
+    for element in seq:
+        if element in intdict:
+            intdict[element] += 1
+        else:
+            intdict[element] = 1
+    for element in intdict:
+        if intdict[element] % 2 != 0:
+            odd =element
+        else:
+            pass
+    return odd
+    
+#Given an array of integers, find the one that appears an odd number of times.
+#There will always be only one integer that appears an odd number of times.
